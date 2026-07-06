@@ -95,10 +95,11 @@ with tab1:
     shap.plots.waterfall(shap_input[0], max_display=12, show=False)
     st.pyplot(plt.gcf(), clear_figure=True)
     st.caption(
-        "Red bars push the prediction toward class 1 (benign), "
-        "blue toward class 0 (malignant). The plot decomposes this "
-        "specific prediction into per-feature contributions."
-    )
+    "Red bars push the prediction toward class 1 (benign), "
+    "blue toward class 0 (malignant). Note: red = toward benign here, "
+    "not malignant — SHAP colors by direction of effect, not severity. "
+    "The plot decomposes this specific prediction into per-feature contributions."
+)
 
 # ---------- Tab 2: global SHAP ----------
 with tab2:
